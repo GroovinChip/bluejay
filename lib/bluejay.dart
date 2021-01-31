@@ -2,3 +2,4 @@
 
 library bluejay;
 
+export 'src/defer_init.dart';
