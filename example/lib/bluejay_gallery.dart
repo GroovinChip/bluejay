@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'defer_init_example.dart';
+import 'theme_brightness_animated_builder_example.dart';
 
 class BluejayGallery extends StatelessWidget {
   @override
@@ -17,6 +18,15 @@ class BluejayGallery extends StatelessWidget {
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (_) => DeferInitExample(),
+              ),
+            ),
+          ),
+          ListTile(
+            title: Text('ThemeBrightnessAnimatedBuilder'),
+            subtitle: Text('Creator: Luke Pighetti'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ThemeBrightnessAnimatedBuilderExample(),
               ),
             ),
           ),
