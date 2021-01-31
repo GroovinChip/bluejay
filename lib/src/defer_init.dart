@@ -58,7 +58,6 @@ class _DeferInitState<T extends Widget?> extends State<DeferInit<T>> {
     return FutureBuilder(
       future: _future,
       builder: (BuildContext context, AsyncSnapshot<T> snapshot) {
-        print(snapshot.connectionState);
         if (snapshot.connectionState != ConnectionState.done) {
           return widget.loadingWidget;
         } else if (snapshot.hasError) {
