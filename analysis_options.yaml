@@ -1,0 +1,10 @@
+linter:
+  rules:
+    prefer_relative_imports: true
+    sort_constructors_first: true
+    prefer_single_quotes: true
+    package_api_docs: true
+
+analyzer:
+  exclude:
+    - test
