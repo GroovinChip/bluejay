@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
 
 import 'defer_init_example.dart';
@@ -19,8 +20,8 @@ class BluejayGallery extends StatelessWidget {
               'DeferInit',
               style: GoogleFonts.firaCode(),
             ),
-            subtitle: Text('Prevents the initialization of UI until the '
-                'provided asynchronous task is completed'),
+            subtitle: Text('Prevents UI initialization until the '
+                'provided async task is completed'),
             trailing: Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
@@ -29,8 +30,12 @@ class BluejayGallery extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('ThemeBrightnessAnimatedBuilder'),
-            subtitle: Text('Creator: Luke Pighetti'),
+            title: Text(
+              'ThemeBrightnessAnimatedBuilder',
+              style: GoogleFonts.firaCode(),
+            ),
+            subtitle: Text(
+                'Simple animation between light/dark themes; tied to MaterialApp\'s ThemeData.'),
             trailing: Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(

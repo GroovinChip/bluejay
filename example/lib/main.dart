@@ -4,7 +4,9 @@ import 'bluejay_colors.dart';
 import 'bluejay_gallery.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
