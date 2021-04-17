@@ -4,20 +4,20 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0-179.0.dev <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.0
+  cupertino_icons: ^1.0.2
   bluejay:
     path: ..
-  google_fonts: ^1.1.2
-  material_design_icons_flutter: ^4.0.5855
-  provider: ^4.3.3
-  rxdart: ^0.25.0
-  shared_preferences: ^0.5.12+4
+  google_fonts: ^2.0.0
+  material_design_icons_flutter: ^4.0.5955
+  provider: ^5.0.0
+  rxdart: ^0.26.0
+  shared_preferences: ^2.0.5
   url_launcher: ^5.7.10
 
 dev_dependencies:
