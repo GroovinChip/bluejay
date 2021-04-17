@@ -11,6 +11,3 @@ bluejay is:
 * *Organized*
 * *Well-documented*
 * *Null safe*
-
-## Contributing
-`bluejay` accepts content contribution via GitHub. Please check out CONTRIBUTING.md for more details.
