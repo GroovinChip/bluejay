@@ -2,6 +2,6 @@
 
 library bluejay;
 
-export 'src/defer_init.dart';
-export 'src/theme_brightness_animated_builder.dart';
+export 'src/widgets/defer_init.dart';
+export 'src/widgets/theme_brightness_animated_builder.dart';
 export 'src/extensions/extensions.dart';
