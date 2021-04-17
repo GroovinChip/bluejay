@@ -1,7 +1,7 @@
 import 'package:bluejay/bluejay.dart';
 import 'package:flutter/material.dart';
 
-import 'info_dialog.dart';
+import '../widgets/author_button.dart';
 
 class ThemeBrightnessAnimatedBuilderExample extends StatefulWidget {
   @override
@@ -20,19 +20,12 @@ class _ThemeBrightnessAnimatedBuilderExampleState
       appBar: AppBar(
         title: Text('TBAB Example'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.info_outline),
-            onPressed: () => showDialog(
-              context: context,
-              builder: (_) => InfoDialog(
-                authorName: 'Luke Pighetti',
-                authorAvatarUrl:
-                    'https://pbs.twimg.com/profile_images/1353406162939514880/1bbUvJoR_400x400.jpg',
-                authorUrl: '',
-                sourceUrl:
-                    'https://gist.github.com/lukepighetti/074f505903e7ab5561da7e8e7fda04b2',
-              ),
-            ),
+          AuthorButton(
+            authorName: 'Luke Pighetti',
+            authorAvatarUrl:
+                'https://pbs.twimg.com/profile_images/1353406162939514880/1bbUvJoR_400x400.jpg',
+            sourceUrl:
+                'https://gist.github.com/lukepighetti/074f505903e7ab5561da7e8e7fda04b2',
           ),
         ],
       ),

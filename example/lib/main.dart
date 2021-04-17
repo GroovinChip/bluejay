@@ -1,4 +1,6 @@
+import 'package:bluejay/bluejay.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'bluejay_colors.dart';
 import 'bluejay_gallery.dart';
@@ -12,13 +14,21 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bluejay Gallery',
-      theme: ThemeData(
-        primarySwatch: bluejayPrimary,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+    return Provider(
+      create: (context) => LoggingService(
+        loggers: {
+          ConsoleLogger(),
+        },
       ),
-      home: BluejayGallery(),
+      child: MaterialApp(
+        title: 'Bluejay Gallery',
+        theme: ThemeData(
+          //brightness: Brightness.light,
+          primarySwatch: bluejayPrimary,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: BluejayGallery(),
+      ),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:url_launcher/url_launcher.dart';
 
 class InfoDialog extends StatelessWidget {
@@ -7,13 +6,13 @@ class InfoDialog extends StatelessWidget {
     Key? key,
     required this.authorName,
     required this.authorAvatarUrl,
-    required this.authorUrl,
+    this.authorUrl,
     required this.sourceUrl,
   }) : super(key: key);
 
   final String authorName;
   final String authorAvatarUrl;
-  final String authorUrl;
+  final String? authorUrl;
   final String sourceUrl;
 
   @override
@@ -29,8 +28,7 @@ class InfoDialog extends StatelessWidget {
           ),
           title: Text(authorName),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+        ButtonBar(
           children: [
             TextButton(
               child: Text('VIEW SOURCE'),
@@ -39,9 +37,6 @@ class InfoDialog extends StatelessWidget {
                   await launch(sourceUrl);
                 }
               },
-            ),
-            SizedBox(
-              width: 8.0,
             ),
           ],
         ),

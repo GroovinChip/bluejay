@@ -1,50 +1,61 @@
+import 'package:bluejay/bluejay.dart';
+import 'package:example/screens/logger_example.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
-import 'defer_init_example.dart';
-import 'theme_brightness_animated_builder_example.dart';
+import 'screens/defer_init_example.dart';
+import 'screens/theme_brightness_animated_builder_example.dart';
+import 'widgets/bluejay_item_tile.dart';
 
 class BluejayGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Bluejay Gallery'),
-      ),
-      body: ListView(
-        physics: ClampingScrollPhysics(),
-        children: [
-          ListTile(
-            title: Text(
-              'DeferInit',
-              style: GoogleFonts.firaCode(),
-            ),
-            subtitle: Text('Prevents UI initialization until the '
-                'provided async task is completed'),
-            trailing: Icon(Icons.chevron_right),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => DeferInitExample(),
-              ),
-            ),
+    return Consumer<LoggingService>(
+      builder: (context, logger, child) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Bluejay Gallery'),
           ),
-          ListTile(
-            title: Text(
-              'ThemeBrightnessAnimatedBuilder',
-              style: GoogleFonts.firaCode(),
-            ),
-            subtitle: Text(
-                'Simple animation between light/dark themes; tied to MaterialApp\'s ThemeData.'),
-            trailing: Icon(Icons.chevron_right),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ThemeBrightnessAnimatedBuilderExample(),
+          body: ListView(
+            physics: ClampingScrollPhysics(),
+            children: [
+              BluejayItemTile(
+                name: 'DeferInit',
+                description: 'Prevents UI initialization until the '
+                    'provided async task is completed',
+                onTap: () {
+                  logger.log('gallery', 'tapped "DeferInit"');
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => DeferInitExample(),
+                    ),
+                  );
+                },
               ),
-            ),
+              BluejayItemTile(
+                name: 'ThemeBrightnessAnimatedBuilder',
+                description:
+                    'Simple animation between light/dark themes; tied to MaterialApp\'s ThemeData.',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => ThemeBrightnessAnimatedBuilderExample(),
+                  ),
+                ),
+              ),
+              BluejayItemTile(
+                name: 'Logger',
+                description:
+                    'A simple logging service using extensions for channels with multiple outputs',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => LoggerExample(),
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
