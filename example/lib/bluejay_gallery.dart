@@ -1,9 +1,10 @@
 import 'package:bluejay/bluejay.dart';
-import 'package:example/screens/logger_example.dart';
+import 'package:example/screens/text_editing_contoller_builder_example.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/defer_init_example.dart';
+import 'screens/logger_example.dart';
 import 'screens/theme_brightness_animated_builder_example.dart';
 import 'widgets/bluejay_item_tile.dart';
 
@@ -39,6 +40,16 @@ class BluejayGallery extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => ThemeBrightnessAnimatedBuilderExample(),
+                  ),
+                ),
+              ),
+              BluejayItemTile(
+                name: 'TextEditingControllerBuilder',
+                description:
+                    'Exposes a TextEditingController to a child widget, which allows any TextField to be declarative.',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => TextEditingControllerBuilderExample(),
                   ),
                 ),
               ),

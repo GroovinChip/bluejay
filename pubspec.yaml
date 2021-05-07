@@ -1,9 +1,8 @@
 name: bluejay
 description: A curated collection of useful Flutter and Dart things
-version: 0.0.3
-author: groovinchip@gmail.com
-repository: ''
-issue_tracker: ''
+version: 1.0.0
+repository: https://github.com/GroovinChip/bluejay
+issue_tracker: https://github.com/GroovinChip/bluejay/issues
 homepage: groovinchip.dev
 
 environment:
