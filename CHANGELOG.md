@@ -1,3 +1,6 @@
+## 1.0.1
+* `printFullStacktraces()`
+
 ## 1.0.0
 * pub.dev release
 * `Logger`

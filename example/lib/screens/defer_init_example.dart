@@ -1,10 +1,9 @@
 import 'dart:math' show Random;
 
 import 'package:bluejay/bluejay.dart';
-import 'package:example/widgets/author_button.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/info_dialog.dart';
+import '../widgets/author_button.dart';
 
 class MyService {
   MyService._();

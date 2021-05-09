@@ -6,6 +6,8 @@ import 'bluejay_colors.dart';
 import 'bluejay_gallery.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  printFullStacktraces();
   runApp(
     MyApp(),
   );

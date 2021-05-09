@@ -1,10 +1,10 @@
 import 'package:bluejay/bluejay.dart';
-import 'package:example/screens/text_editing_contoller_builder_example.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/defer_init_example.dart';
 import 'screens/logger_example.dart';
+import 'screens/text_editing_controller_builder_example.dart';
 import 'screens/theme_brightness_animated_builder_example.dart';
 import 'widgets/bluejay_item_tile.dart';
 
