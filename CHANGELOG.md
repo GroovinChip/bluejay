@@ -1,3 +1,6 @@
+## 1.2.0
+* `ShakeWidget`
+
 ## 1.1.0+1
 * Include author attributions directly in class-level documentation
 

@@ -5,6 +5,28 @@ import 'animation_controller_state.dart';
 
 /// A widget that can shake.
 ///
+/// Requires a `GlobalKey<ShakeWidgetState>()` to start the animation.
+///
+/// Usage:
+/// ```dart
+/// final _shakeKey = GlobalKey<ShakeWidgetState>();
+/// ...
+///
+/// ShakeWidget(
+///   key: _shakeKey,
+///   shakeCount: 3,
+///   shakeOffset: 10,
+///   shakeDuration: Duration(milliseconds: 400),
+///   child: Text(
+///     'Invalid credentials',
+///     style: TextStyle(
+///       color: Colors.red,
+///       fontWeight: FontWeight.bold,
+///     ),
+///   ),
+/// ),
+/// ```
+///
 /// This code was authored by Andrea Bizzotto. Please view the original source
 /// [here](https://twitter.com/biz84/status/1392157843164438532?s=20).
 class ShakeWidget extends StatefulWidget {
