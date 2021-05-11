@@ -1,6 +1,3 @@
-// This widget was created by Luke Pighetti and edited by GroovinChip.
-// Please view the original source at https://gist.github.com/lukepighetti/55d367808e994e426fc0c7f7032fab9c
-
 import 'package:flutter/widgets.dart';
 
 /// Exposes a [TextEditingController] to the child, which allows
@@ -23,6 +20,9 @@ import 'package:flutter/widgets.dart';
 ///   },
 /// );
 /// ```
+///
+/// This widget was created by Luke Pighetti and edited by GroovinChip.
+/// Please view the original source [here](https://gist.github.com/lukepighetti/55d367808e994e426fc0c7f7032fab9c)
 class TextEditingControllerBuilder extends StatefulWidget {
   const TextEditingControllerBuilder({
     Key? key,

@@ -22,6 +22,9 @@ import 'package:flutter/foundation.dart';
 ///   );
 /// }
 /// ```
+///
+/// This solution was reached by Marcello Glasburg and shared on Twitter by
+/// Thomas Burkhart. Please view the source tweet [here](https://twitter.com/thomasburkhartb/status/1384162926609666050?s=21)
 void printFullStacktraces() {
   FlutterError.onError = (FlutterErrorDetails details) =>
       FlutterError.dumpErrorToConsole(details, forceReport: true);

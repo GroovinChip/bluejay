@@ -1,6 +1,3 @@
-// This widget was created by Simon Lightfoot and modified slightly by GroovinChip.
-// Please view the original source at https://gist.github.com/slightfoot/85d39f7c235119b724b6b1fa4afa0b41.
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RendererBinding;
 
@@ -15,6 +12,9 @@ typedef OnDeferInit<T extends Widget?> = Future<T> Function();
 ///
 /// Use in a [StatefulWidget] when async initialization of a service
 /// class is required before `initState` starts to build UI.
+///
+/// This widget was created by Simon Lightfoot and modified slightly by GroovinChip.
+/// Please view the original source [here](https://gist.github.com/slightfoot/85d39f7c235119b724b6b1fa4afa0b41.)
 @immutable
 class DeferInit<T extends Widget?> extends StatefulWidget {
   const DeferInit({
