@@ -59,8 +59,11 @@ class ShakeWidgetState extends AnimationControllerState<ShakeWidget> {
       end: 1.0,
     ).animate(
       CurvedAnimation(
-          parent: animationController,
-          curve: SineCurve(count: widget.shakeCount.toDouble())),
+        parent: animationController,
+        curve: SineCurve(
+          count: widget.shakeCount.toDouble(),
+        ),
+      ),
     );
     animationController.addStatusListener(_updateStatus);
   }
@@ -88,7 +91,7 @@ class ShakeWidgetState extends AnimationControllerState<ShakeWidget> {
 
   void _updateStatus(AnimationStatus status) {
     if (status == AnimationStatus.completed) {
-      animationController.reset;
+      animationController.reset();
     }
   }
 
