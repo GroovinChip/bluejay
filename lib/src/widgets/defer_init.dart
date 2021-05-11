@@ -14,7 +14,7 @@ typedef OnDeferInit<T extends Widget?> = Future<T> Function();
 /// functions from Flutter's [RendererBinding] mixin.
 ///
 /// Use in a [StatefulWidget] when async initialization of a service
-/// class is required before [initState] starts to build UI.
+/// class is required before `initState` starts to build UI.
 @immutable
 class DeferInit<T extends Widget?> extends StatefulWidget {
   const DeferInit({
