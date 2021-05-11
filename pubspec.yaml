@@ -1,6 +1,6 @@
 name: bluejay
 description: A curated collection of useful Flutter and Dart widgets, classes, and extensions
-version: 1.1.0
+version: 1.1.0+1
 repository: https://github.com/GroovinChip/bluejay
 issue_tracker: https://github.com/GroovinChip/bluejay/issues
 

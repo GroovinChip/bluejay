@@ -1,11 +1,11 @@
-// This logging utility was created by Luke Pighetti.
-// Please view the original source at https://gist.github.com/lukepighetti/5283229a351ab394376e84cff8277bdb
-
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
 /// The base class for a logging channel or service
+///
+/// This logging utility was created by Luke Pighetti.
+/// Please view the original source [here](https://gist.github.com/lukepighetti/5283229a351ab394376e84cff8277bdb)
 abstract class Logger {
   /// Log a message
   void log(String channel, String message);
@@ -39,6 +39,9 @@ class LoggingService implements Logger {
 }
 
 /// A logging channel that outputs to the local development console
+///
+/// This logging utility was created by Luke Pighetti.
+/// Please view the original source [here](https://gist.github.com/lukepighetti/5283229a351ab394376e84cff8277bdb)
 class ConsoleLogger implements Logger {
   @override
   void log(String channel, String message) {
@@ -47,6 +50,9 @@ class ConsoleLogger implements Logger {
 }
 
 /// A logging channel that sends messages to a remote logging endpoint
+///
+/// This logging utility was created by Luke Pighetti.
+/// Please view the original source [here](https://gist.github.com/lukepighetti/5283229a351ab394376e84cff8277bdb)
 class RemoteLogger implements Logger {
   RemoteLogger({required this.baseUrl});
 

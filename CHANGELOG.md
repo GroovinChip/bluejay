@@ -1,3 +1,6 @@
+## 1.1.0+1
+* Include author attributions directly in class-level documentation
+
 ## 1.1.0
 * `printFullStacktraces()`
 

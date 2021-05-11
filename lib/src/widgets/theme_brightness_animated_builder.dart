@@ -1,6 +1,3 @@
-// This widget was created by Luke Pighetti and edited by GroovinChip.
-// Please view the original source at https://gist.github.com/lukepighetti/074f505903e7ab5561da7e8e7fda04b2
-
 import 'package:flutter/material.dart';
 
 /// A simple way to animate between light/dark themes with the animation tied
@@ -30,7 +27,10 @@ import 'package:flutter/material.dart';
 ///     );
 ///   }
 /// }
+///
 /// ```
+/// This widget was created by Luke Pighetti and edited by GroovinChip.
+/// Please view the original source [here](https://gist.github.com/lukepighetti/074f505903e7ab5561da7e8e7fda04b2)
 class ThemeBrightnessAnimatedBuilder extends StatelessWidget {
   /// A builder that automatically transitions t between `0.0` and `1.0`
   /// depending on if [ThemeData.brightness] is [Brightness.dark] or
