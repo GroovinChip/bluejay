@@ -1,3 +1,6 @@
+## 1.3.0
+* `benchmarkAsync()`
+
 ## 1.2.0
 * `ShakeWidget`
 
