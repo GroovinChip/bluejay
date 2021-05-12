@@ -1,4 +1,5 @@
 import 'package:bluejay/bluejay.dart';
+import 'package:example/screens/benchmark_async_example.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -70,6 +71,16 @@ class BluejayGallery extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => LoggerExample(),
+                  ),
+                ),
+              ),
+              BluejayItemTile(
+                name: 'Async Function Benchmark',
+                description:
+                'A function for benchmarking asynchronous functions',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => BenchmarkAsyncExample(),
                   ),
                 ),
               ),

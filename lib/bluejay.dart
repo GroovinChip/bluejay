@@ -4,6 +4,7 @@ library bluejay;
 
 export 'src/classes/sine_curve.dart';
 export 'src/extensions/extensions.dart';
+export 'src/functions/benchmark_async.dart';
 export 'src/logging/logger.dart';
 export 'src/logging/print_full_stacktraces.dart';
 export 'src/widgets/animation_controller_state.dart';
