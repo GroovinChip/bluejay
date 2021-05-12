@@ -1,6 +1,6 @@
 # bluejay
 
-<img src="https://imgur.com/a/qCdn8SB.png" />
+<blockquote class="imgur-embed-pub" lang="en" data-id="Y7Vz44D"><a href="https://imgur.com/Y7Vz44D">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 I often come across useful widgets, extensions, functions, and more. Until now, I have been bookmarking them in my browser, on Twitter, starring on GitHub, etc. It has been difficult to reference them that way, and subsequently frustrating to implement them in my projects. 
 
