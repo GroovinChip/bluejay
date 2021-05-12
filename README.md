@@ -1,6 +1,6 @@
 # bluejay
 
-<img src="https://i.imgur.com/Y7Vz44D.png" width="100%" height="75%"/>
+<img src="https://i.imgur.com/Y7Vz44D.png" width="100%" height="50%"/>
 
 I often come across useful widgets, extensions, functions, and more. Until now, I have been bookmarking them in my browser, on Twitter, starring on GitHub, etc. It has been difficult to reference them that way, and subsequently frustrating to implement them in my projects. 
 
