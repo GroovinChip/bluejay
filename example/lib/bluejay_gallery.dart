@@ -1,10 +1,10 @@
 import 'package:bluejay/bluejay.dart';
-import 'package:example/screens/benchmark_async_example.dart';
-import 'package:example/screens/fade_indexed_stack_example.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'screens/benchmark_async_example.dart';
 import 'screens/defer_init_example.dart';
+import 'screens/fade_indexed_stack_example.dart';
 import 'screens/logger_example.dart';
 import 'screens/shake_widget_example.dart';
 import 'screens/text_editing_controller_builder_example.dart';

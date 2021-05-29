@@ -1,6 +1,7 @@
 import 'package:bluejay/bluejay.dart';
-import 'package:example/widgets/author_button.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/author_button.dart';
 
 class BenchmarkAsyncExample extends StatefulWidget {
   BenchmarkAsyncExample({Key? key}) : super(key: key);
