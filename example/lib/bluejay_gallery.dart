@@ -1,5 +1,6 @@
 import 'package:bluejay/bluejay.dart';
 import 'package:example/screens/benchmark_async_example.dart';
+import 'package:example/screens/fade_indexed_stack_example.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -65,6 +66,16 @@ class BluejayGallery extends StatelessWidget {
                 ),
               ),
               BluejayItemTile(
+                name: 'FadeIndexedStack',
+                description:
+                    'An IndexedStack that animates its children in and out.',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => FadeIndexedStackExample(),
+                  ),
+                ),
+              ),
+              BluejayItemTile(
                 name: 'Logger',
                 description:
                     'A simple logging service using extensions for channels with multiple outputs',
@@ -77,7 +88,7 @@ class BluejayGallery extends StatelessWidget {
               BluejayItemTile(
                 name: 'Async Function Benchmark',
                 description:
-                'A function for benchmarking asynchronous functions',
+                    'A function for benchmarking asynchronous functions',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => BenchmarkAsyncExample(),

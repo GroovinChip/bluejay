@@ -1,3 +1,6 @@
+## 1.4.0
+* `FadeIndexedStack`
+
 ## 1.3.0
 * `benchmarkAsync()`
 

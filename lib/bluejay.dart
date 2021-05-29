@@ -8,6 +8,7 @@ export 'src/functions/benchmark_async.dart';
 export 'src/logging/logger.dart';
 export 'src/logging/print_full_stacktraces.dart';
 export 'src/widgets/animation_controller_state.dart';
+export 'src/widgets/fade_indexed_stack.dart';
 export 'src/widgets/defer_init.dart';
 export 'src/widgets/shake_widget.dart';
 export 'src/widgets/text_editing_controller_builder.dart';
