@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import '../widgets/author_button.dart';
 
 class BenchmarkAsyncExample extends StatefulWidget {
-  BenchmarkAsyncExample({Key? key}) : super(key: key);
+  const BenchmarkAsyncExample({super.key});
 
   @override
-  _BenchmarkAsyncExampleState createState() => _BenchmarkAsyncExampleState();
+  State<BenchmarkAsyncExample> createState() => _BenchmarkAsyncExampleState();
 }
 
 class _BenchmarkAsyncExampleState extends State<BenchmarkAsyncExample> {
@@ -15,8 +15,8 @@ class _BenchmarkAsyncExampleState extends State<BenchmarkAsyncExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TECB Example'),
-        actions: [
+        title: const Text('TECB Example'),
+        actions: const [
           AuthorButton(
             authorName: 'Luke Pighetti',
             authorAvatarUrl:
@@ -32,9 +32,10 @@ class _BenchmarkAsyncExampleState extends State<BenchmarkAsyncExample> {
           children: [
             ElevatedButton(
               onPressed: () {
+                // ignore: void_checks
                 benchmarkAsync('Test', () async => await Future.value(5));
               },
-              child: Text('BENCHMARK'),
+              child: const Text('BENCHMARK'),
             ),
           ],
         ),

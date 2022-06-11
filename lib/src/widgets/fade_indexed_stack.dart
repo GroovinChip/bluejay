@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
+/// {@template fadeIndexedStack}
 /// An [IndexedStack] that animates its children in and out using a
 /// [FadeTransition].
 ///
 /// This widget was authored by Diego Velásquez López. Please view the original
 /// source code [here](https://gist.github.com/diegoveloper/1cd23e79a31d0c18a67424f0cbdfd7ad)
+/// {@endtemplate}
 class FadeIndexedStack extends StatefulWidget {
+  /// {@macro fadeIndexedStack}
   const FadeIndexedStack({
-    Key? key,
+    super.key,
     required this.index,
     required this.children,
     this.duration = const Duration(
       milliseconds: 800,
     ),
-  }) : super(key: key);
+  });
 
   /// The index of the child to show.
   final int index;
@@ -27,7 +30,7 @@ class FadeIndexedStack extends StatefulWidget {
   final Duration duration;
 
   @override
-  _FadeIndexedStackState createState() => _FadeIndexedStackState();
+  State<FadeIndexedStack> createState() => _FadeIndexedStackState();
 }
 
 class _FadeIndexedStackState extends State<FadeIndexedStack>

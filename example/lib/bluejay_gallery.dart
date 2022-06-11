@@ -12,16 +12,18 @@ import 'screens/theme_brightness_animated_builder_example.dart';
 import 'widgets/bluejay_item_tile.dart';
 
 class BluejayGallery extends StatelessWidget {
+  const BluejayGallery({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<LoggingService>(
       builder: (context, logger, child) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Bluejay Gallery'),
+            title: const Text('Bluejay Gallery'),
           ),
           body: ListView(
-            physics: ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             children: [
               BluejayItemTile(
                 name: 'DeferInit',
@@ -31,7 +33,7 @@ class BluejayGallery extends StatelessWidget {
                   logger.log('gallery', 'tapped "DeferInit"');
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => DeferInitExample(),
+                      builder: (_) => const DeferInitExample(),
                     ),
                   );
                 },
@@ -42,7 +44,8 @@ class BluejayGallery extends StatelessWidget {
                     'Simple animation between light/dark themes; tied to MaterialApp\'s ThemeData.',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => ThemeBrightnessAnimatedBuilderExample(),
+                    builder: (_) =>
+                        const ThemeBrightnessAnimatedBuilderExample(),
                   ),
                 ),
               ),
@@ -52,7 +55,7 @@ class BluejayGallery extends StatelessWidget {
                     'Exposes a TextEditingController to a child widget, which allows any TextField to be declarative.',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => TextEditingControllerBuilderExample(),
+                    builder: (_) => const TextEditingControllerBuilderExample(),
                   ),
                 ),
               ),
@@ -71,7 +74,7 @@ class BluejayGallery extends StatelessWidget {
                     'An IndexedStack that animates its children in and out.',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => FadeIndexedStackExample(),
+                    builder: (_) => const FadeIndexedStackExample(),
                   ),
                 ),
               ),
@@ -81,7 +84,7 @@ class BluejayGallery extends StatelessWidget {
                     'A simple logging service using extensions for channels with multiple outputs',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => LoggerExample(),
+                    builder: (_) => const LoggerExample(),
                   ),
                 ),
               ),
@@ -91,7 +94,7 @@ class BluejayGallery extends StatelessWidget {
                     'A function for benchmarking asynchronous functions',
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => BenchmarkAsyncExample(),
+                    builder: (_) => const BenchmarkAsyncExample(),
                   ),
                 ),
               ),

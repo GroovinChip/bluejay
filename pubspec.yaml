@@ -1,22 +1,23 @@
 name: bluejay
 description: A curated collection of useful Flutter and Dart widgets, classes, and extensions
-version: 1.4.0
+version: 1.5.0
 repository: https://github.com/GroovinChip/bluejay
 issue_tracker: https://github.com/GroovinChip/bluejay/issues
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
     
-  http: ^0.13.3
+  http: ^0.13.4
 
 dev_dependencies:
   test:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.1
 
 flutter:
   uses-material-design: true

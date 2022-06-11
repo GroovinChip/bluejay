@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import '../widgets/author_button.dart';
 
 class ThemeBrightnessAnimatedBuilderExample extends StatefulWidget {
+  const ThemeBrightnessAnimatedBuilderExample({super.key});
+
   @override
-  _ThemeBrightnessAnimatedBuilderExampleState createState() =>
+  State<ThemeBrightnessAnimatedBuilderExample> createState() =>
       _ThemeBrightnessAnimatedBuilderExampleState();
 }
 
@@ -18,8 +20,8 @@ class _ThemeBrightnessAnimatedBuilderExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TBAB Example'),
-        actions: [
+        title: const Text('TBAB Example'),
+        actions: const [
           AuthorButton(
             authorName: 'Luke Pighetti',
             authorAvatarUrl:
@@ -52,7 +54,7 @@ class _ThemeBrightnessAnimatedBuilderExampleState
                 },
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Text(isLight ? 'Light' : 'Dark'),
             Switch.adaptive(
               value: isLight,

@@ -1,3 +1,7 @@
+## 1.5.0
+* Flutter 3 upgrade
+* Use `flutter_lints`
+
 ## 1.4.0
 * `FadeIndexedStack`
 

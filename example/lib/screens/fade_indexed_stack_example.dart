@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import '../widgets/author_button.dart';
 
 class FadeIndexedStackExample extends StatefulWidget {
-  FadeIndexedStackExample({Key? key}) : super(key: key);
+  const FadeIndexedStackExample({super.key});
 
   @override
-  _FadeIndexedStackExampleState createState() =>
+  State<FadeIndexedStackExample> createState() =>
       _FadeIndexedStackExampleState();
 }
 
@@ -17,8 +17,8 @@ class _FadeIndexedStackExampleState extends State<FadeIndexedStackExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FadeIndexedStack Example'),
-        actions: [
+        title: const Text('FadeIndexedStack Example'),
+        actions: const [
           AuthorButton(
             authorName: 'Diego Velásquez López',
             authorAvatarUrl:
@@ -31,7 +31,7 @@ class _FadeIndexedStackExampleState extends State<FadeIndexedStackExample> {
       body: Row(
         children: [
           NavigationRail(
-            destinations: [
+            destinations: const [
               NavigationRailDestination(
                 icon: Icon(Icons.account_circle),
                 label: Text('Account'),
@@ -56,7 +56,7 @@ class _FadeIndexedStackExampleState extends State<FadeIndexedStackExample> {
                     width: 150,
                     color: Colors.indigo,
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       'Account',
                       style: TextStyle(
                         color: Colors.white,
@@ -70,7 +70,7 @@ class _FadeIndexedStackExampleState extends State<FadeIndexedStackExample> {
                     width: 150,
                     color: Colors.red,
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       'Home',
                       style: TextStyle(
                         color: Colors.white,

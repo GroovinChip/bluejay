@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 
 /// The base class for a logging channel or service
@@ -45,7 +46,7 @@ class LoggingService implements Logger {
 class ConsoleLogger implements Logger {
   @override
   void log(String channel, String message) {
-    print('[$channel] (${DateTime.now()}) $message');
+    debugPrint('[$channel] (${DateTime.now()}) $message');
   }
 }
 
@@ -69,13 +70,13 @@ class RemoteLogger implements Logger {
           'Content-Type': 'application/json',
         },
         body: json.encode({
-          'channel': '$channel',
+          'channel': channel,
           'timestamp': '$timestamp',
-          'message': '$message',
+          'message': message,
         }),
       );
     } catch (e) {
-      print('[RemoteLogger] error: $e');
+      debugPrint('[RemoteLogger] error: $e');
     }
   }
 }

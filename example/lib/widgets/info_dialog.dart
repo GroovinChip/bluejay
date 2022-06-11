@@ -3,12 +3,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 class InfoDialog extends StatelessWidget {
   const InfoDialog({
-    Key? key,
+    super.key,
     required this.authorName,
     required this.authorAvatarUrl,
     this.authorUrl,
     required this.sourceUrl,
-  }) : super(key: key);
+  });
 
   final String authorName;
   final String authorAvatarUrl;
@@ -18,7 +18,7 @@ class InfoDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SimpleDialog(
-      title: Text('Author'),
+      title: const Text('Author'),
       children: [
         ListTile(
           leading: CircleAvatar(
@@ -31,10 +31,10 @@ class InfoDialog extends StatelessWidget {
         ButtonBar(
           children: [
             TextButton(
-              child: Text('VIEW SOURCE'),
+              child: const Text('VIEW SOURCE'),
               onPressed: () async {
-                if (await canLaunch(sourceUrl)) {
-                  await launch(sourceUrl);
+                if (await canLaunchUrl(Uri.parse(sourceUrl))) {
+                  await launchUrl(Uri.parse(sourceUrl));
                 }
               },
             ),

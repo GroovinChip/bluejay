@@ -36,10 +36,10 @@ class ThemeBrightnessAnimatedBuilder extends StatelessWidget {
   /// depending on if [ThemeData.brightness] is [Brightness.dark] or
   /// [Brightness.light]
   const ThemeBrightnessAnimatedBuilder({
-    Key? key,
+    super.key,
     required this.builder,
     this.child,
-  }) : super(key: key);
+  });
 
   /// `0.0` when [ThemeData.brightness] is [Brightness.light]
   /// `1.0` when [ThemeData.brightness] is [Brightness.dark]

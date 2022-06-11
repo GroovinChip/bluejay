@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart' show RendererBinding;
 /// A generic asynchronous function that returns a Widget.
 typedef OnDeferInit<T extends Widget?> = Future<T> Function();
 
+/// {@template deferInit}
 /// Prevents the initialization of UI until the provided asynchronous task is
 /// completed.
 ///
@@ -15,14 +16,16 @@ typedef OnDeferInit<T extends Widget?> = Future<T> Function();
 ///
 /// This widget was created by Simon Lightfoot and modified slightly by GroovinChip.
 /// Please view the original source [here](https://gist.github.com/slightfoot/85d39f7c235119b724b6b1fa4afa0b41.)
+/// {@endtemplate}
 @immutable
 class DeferInit<T extends Widget?> extends StatefulWidget {
+  /// {@macro deferInit}
   const DeferInit({
-    Key? key,
+    super.key,
     required this.onDefer,
     this.loadingWidget = const SizedBox.shrink(),
     this.emptyWidget = const SizedBox.shrink(),
-  }) : super(key: key);
+  });
 
   /// The function to call when deferring initialization
   final OnDeferInit<T> onDefer;
@@ -38,7 +41,7 @@ class DeferInit<T extends Widget?> extends StatefulWidget {
   final Widget emptyWidget;
 
   @override
-  _DeferInitState<T> createState() => _DeferInitState<T>();
+  State<DeferInit<T>> createState() => _DeferInitState<T>();
 }
 
 class _DeferInitState<T extends Widget?> extends State<DeferInit<T>> {
@@ -47,9 +50,9 @@ class _DeferInitState<T extends Widget?> extends State<DeferInit<T>> {
   @override
   void initState() {
     super.initState();
-    RendererBinding.instance!.deferFirstFrame();
+    RendererBinding.instance.deferFirstFrame();
     _future = widget.onDefer().whenComplete(() {
-      RendererBinding.instance!.allowFirstFrame();
+      RendererBinding.instance.allowFirstFrame();
     });
   }
 

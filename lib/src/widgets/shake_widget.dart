@@ -30,13 +30,13 @@ import 'animation_controller_state.dart';
 /// This code was authored by Andrea Bizzotto. Please view the original source
 /// [here](https://twitter.com/biz84/status/1392157843164438532?s=20).
 class ShakeWidget extends StatefulWidget {
-  ShakeWidget({
-    Key? key,
+  const ShakeWidget({
+    super.key,
     required this.child,
     required this.shakeOffset,
     required this.shakeCount,
     required this.shakeDuration,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final double shakeOffset;
@@ -44,11 +44,12 @@ class ShakeWidget extends StatefulWidget {
   final Duration shakeDuration;
 
   @override
-  ShakeWidgetState createState() => ShakeWidgetState(shakeDuration);
+  // ignore: no_logic_in_create_state
+  State<ShakeWidget> createState() => ShakeWidgetState(shakeDuration);
 }
 
 class ShakeWidgetState extends AnimationControllerState<ShakeWidget> {
-  ShakeWidgetState(Duration duration) : super(duration);
+  ShakeWidgetState(super.duration);
   late Animation<double> _sineAnimation;
 
   @override

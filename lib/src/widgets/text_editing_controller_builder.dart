@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+/// {@template textEditingControllerBuilder}
 /// Exposes a [TextEditingController] to the child, which allows
 /// us to convert any [TextField] into a declarative version.
 ///
@@ -23,12 +24,14 @@ import 'package:flutter/widgets.dart';
 ///
 /// This widget was created by Luke Pighetti and edited by GroovinChip.
 /// Please view the original source [here](https://gist.github.com/lukepighetti/55d367808e994e426fc0c7f7032fab9c)
+/// {@endtemplate}
 class TextEditingControllerBuilder extends StatefulWidget {
+  /// {@macro textEditingControllerBuilder}
   const TextEditingControllerBuilder({
-    Key? key,
+    super.key,
     required this.text,
     required this.builder,
-  }) : super(key: key);
+  });
 
   /// The text to declaratively update in the text controller
   final String text;
@@ -37,7 +40,7 @@ class TextEditingControllerBuilder extends StatefulWidget {
   final Widget Function(BuildContext, TextEditingController) builder;
 
   @override
-  _TextEditingControllerBuilderState createState() =>
+  State<TextEditingControllerBuilder> createState() =>
       _TextEditingControllerBuilderState();
 }
 

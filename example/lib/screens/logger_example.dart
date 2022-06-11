@@ -5,14 +5,16 @@ import 'package:provider/provider.dart';
 import '../widgets/author_button.dart';
 
 class LoggerExample extends StatelessWidget {
+  const LoggerExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<LoggingService>(
       builder: (context, logger, child) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Logger'),
-            actions: [
+            title: const Text('Logger'),
+            actions: const [
               AuthorButton(
                 authorName: 'Luke Pighetti',
                 authorAvatarUrl:
@@ -24,7 +26,7 @@ class LoggerExample extends StatelessWidget {
           ),
           body: Center(
             child: TextButton(
-              child: Text('LOG ME'),
+              child: const Text('LOG ME'),
               onPressed: () => logger.log('LoggerExample', 'This is a log'),
             ),
           ),

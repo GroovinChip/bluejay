@@ -27,12 +27,14 @@ class MyService {
 
 @immutable
 class DeferInitExample extends StatelessWidget {
+  const DeferInitExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DeferInit'),
-        actions: [
+        title: const Text('DeferInit'),
+        actions: const [
           AuthorButton(
             authorName: 'Simon Lightfoot',
             authorAvatarUrl:
@@ -45,21 +47,21 @@ class DeferInitExample extends StatelessWidget {
       body: DeferInit(
         onDefer: () async {
           await MyService.init();
-          await Future.delayed(Duration(seconds: 1));
+          await Future.delayed(const Duration(seconds: 1));
           if (MyService.instance.isLoggedIn()) {
-            return Center(
+            return const Center(
               child: Text('Not logged in'),
             );
           } else {
-            return Center(
+            return const Center(
               child: Text('Logged In'),
             );
           }
         },
-        loadingWidget: Center(
+        loadingWidget: const Center(
           child: CircularProgressIndicator(),
         ),
-        emptyWidget: Center(
+        emptyWidget: const Center(
           child: Text('No Data'),
         ),
       ),

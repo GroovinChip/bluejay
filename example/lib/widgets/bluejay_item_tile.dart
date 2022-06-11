@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class BluejayItemTile extends StatelessWidget {
   const BluejayItemTile({
-    Key? key,
+    super.key,
     required this.name,
     required this.description,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final String name;
   final String description;
@@ -21,7 +21,7 @@ class BluejayItemTile extends StatelessWidget {
         style: GoogleFonts.firaCode(),
       ),
       subtitle: Text(description),
-      trailing: Icon(Icons.chevron_right),
+      trailing: const Icon(Icons.chevron_right),
       onTap: onTap,
     );
   }

@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 import '../widgets/author_button.dart';
 
 class TextEditingControllerBuilderExample extends StatefulWidget {
-  TextEditingControllerBuilderExample({
-    Key? key,
-  }) : super(key: key);
+  const TextEditingControllerBuilderExample({super.key});
 
   @override
-  _TextEditingControllerBuilderExampleState createState() =>
+  State<TextEditingControllerBuilderExample> createState() =>
       _TextEditingControllerBuilderExampleState();
 }
 
@@ -19,14 +17,14 @@ class _TextEditingControllerBuilderExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TECB Example'),
-        actions: [
+        title: const Text('TECB Example'),
+        actions: const [
           AuthorButton(
             authorName: 'Luke Pighetti',
             authorAvatarUrl:
-            'https://pbs.twimg.com/profile_images/1353406162939514880/1bbUvJoR_400x400.jpg',
+                'https://pbs.twimg.com/profile_images/1353406162939514880/1bbUvJoR_400x400.jpg',
             sourceUrl:
-            'https://gist.github.com/lukepighetti/55d367808e994e426fc0c7f7032fab9c',
+                'https://gist.github.com/lukepighetti/55d367808e994e426fc0c7f7032fab9c',
           ),
         ],
       ),

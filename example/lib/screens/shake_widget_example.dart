@@ -4,13 +4,16 @@ import 'package:flutter/material.dart';
 import '../widgets/author_button.dart';
 
 class ShakeWidgetExample extends StatelessWidget {
+  ShakeWidgetExample({super.key});
+
   final _shakeKey = GlobalKey<ShakeWidgetState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ShakeWidget Example'),
-        actions: [
+        title: const Text('ShakeWidget Example'),
+        actions: const [
           AuthorButton(
             authorName: 'Andrea Bizzotto',
             authorAvatarUrl:
@@ -50,18 +53,18 @@ class ShakeWidgetExample extends StatelessWidget {
               const SizedBox(height: 16.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(175, 42),
+                  minimumSize: const Size(175, 42),
                 ),
                 onPressed: () => _shakeKey.currentState?.shake(),
-                child: Text('Sign in'),
+                child: const Text('Sign in'),
               ),
               const SizedBox(height: 16.0),
               ShakeWidget(
                 key: _shakeKey,
                 shakeCount: 3,
                 shakeOffset: 10,
-                shakeDuration: Duration(milliseconds: 400),
-                child: Text(
+                shakeDuration: const Duration(milliseconds: 400),
+                child: const Text(
                   'Invalid credentials',
                   style: TextStyle(
                     color: Colors.red,

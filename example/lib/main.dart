@@ -9,11 +9,13 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   printFullStacktraces();
   runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Provider(
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: bluejayPrimary,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: BluejayGallery(),
+        home: const BluejayGallery(),
       ),
     );
   }

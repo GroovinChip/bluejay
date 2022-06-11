@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 /// Some shortcuts on BuildContext I use a lot
 extension BuildContextX on BuildContext {
   /// Equivalent to `Theme.of(context)`
-  ThemeData get theme => this.theme;
+  // ignore: recursive_getters
+  ThemeData get theme => theme;
 
   /// Equivalent to `Theme.of(context).colorScheme`
   ColorScheme get colorScheme => theme.colorScheme;

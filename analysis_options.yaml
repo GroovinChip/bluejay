@@ -1,9 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
 linter:
   rules:
-    prefer_relative_imports: true
-    sort_constructors_first: true
-    prefer_single_quotes: true
-    package_api_docs: true
+    - use_super_parameters
+    - prefer_relative_imports
+    - sort_constructors_first
+    - prefer_single_quotes
+    - package_api_docs
 
 analyzer:
   exclude:
