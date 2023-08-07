@@ -1,3 +1,6 @@
+## 2.0.0
+* Dart 3 support
+
 ## 1.5.0
 * Flutter 3 upgrade
 * Use `flutter_lints`
